@@ -9,17 +9,17 @@ import React, {
 
 interface ISplashContext {
   isSplashScreenShowing: boolean;
-  addLoading(): void;
-  removeLoading(id: number): void;
+  addLoading(): number;
+  removeLoading(id?: number): void;
 }
 
 interface ISplashProvider {
   SplashScreen: FC;
 }
 
-export const SplashContext = createContext({} as ISplashContext);
+const SplashContext = createContext({} as ISplashContext);
 
-const DEFAULT_LOADING_WAIT_TIME = 500;
+export const DEFAULT_LOADING_WAIT_TIME = 500;
 
 export const SplashProvider: FC<ISplashProvider> = ({
   SplashScreen,
@@ -32,16 +32,23 @@ export const SplashProvider: FC<ISplashProvider> = ({
   useEffect(() => {
     if (loadings.length > 0) {
       clearTimeout(stopLoadingTimeoutId);
-      isSplashScreenShowing;
+      setSplashScreenShowing(true);
       return;
     }
-
     setStopLoadingTimeoutId(
       setTimeout(() => {
         setSplashScreenShowing(false);
       }, DEFAULT_LOADING_WAIT_TIME),
     );
-  }, [isSplashScreenShowing, loadings]);
+  }, [
+    isSplashScreenShowing,
+    loadings,
+    setSplashScreenShowing,
+    setStopLoadingTimeoutId,
+    clearTimeout,
+    setTimeout,
+    DEFAULT_LOADING_WAIT_TIME,
+  ]);
 
   const addLoading = useCallback(() => {
     const id = Math.random();
@@ -49,8 +56,13 @@ export const SplashProvider: FC<ISplashProvider> = ({
     return id;
   }, []);
 
-  const removeLoading = useCallback(removeId => {
-    setLoadings(loadings => loadings.filter(id => id !== removeId));
+  const removeLoading = useCallback((removeId?: number) => {
+    if (removeId !== undefined)
+      setLoadings(loadings => loadings.filter(id => id !== removeId));
+    else
+      setLoadings(loadings =>
+        loadings.filter(id => id !== loadings[loadings.length - 1]),
+      );
   }, []);
 
   return (

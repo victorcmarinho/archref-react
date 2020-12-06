@@ -51,7 +51,6 @@
     "@typescript-eslint/parser": "^4.9.0",
     "axios-mock-adapter": "^1.19.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.3",
     "babel-plugin-root-import": "^6.6.0",
     "customize-cra": "^1.0.0",
     "eslint": "^7.15.0",
@@ -68,7 +67,8 @@
     "lint-staged": "^10.5.3",
     "prettier": "2.2.1",
     "pretty-quick": "^3.1.0",
-    "react-app-rewired": "^2.1.7"
+    "react-app-rewired": "^2.1.7",
+    "react-test-renderer": "^17.0.1"
   },
   "husky": {
     "hooks": {
@@ -105,9 +105,6 @@
       "\\.(woff2?|ttf|otf|eot|png|jpe?g|gif|svg|css|scss)$": "<rootDir>/mock/jest-mockfile.js",
       "^~\\/(.*)$": "<rootDir>/src/$1"
     },
-    "transform": {
-      "\\.{tsx,jsx,ts}": "babel-jest"
-    },
     "coverageReporters": [
       "json",
       "lcov",
@@ -125,7 +122,8 @@
       "reportWebVitals.ts",
       "\\.d\\.ts$",
       "/src/assets/",
-      "/node_modules/"
+      "/node_modules/",
+      "/src/index.tsx"
     ],
     "coverageThreshold": {
       "global": {

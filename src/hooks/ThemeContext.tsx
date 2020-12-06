@@ -1,4 +1,5 @@
 import React, { createContext, FC, useContext, useState } from 'react';
+import { useCallback } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -15,10 +16,10 @@ export const MyThemeProvider: FC = ({ children }) => {
     mode: 'light',
   });
 
-  const toggle = () => {
+  const toggle = useCallback(() => {
     const mode = themeState.mode === 'light' ? `dark` : `light`;
     setThemeState({ mode });
-  };
+  }, [setThemeState, themeState]);
 
   return (
     <ThemeToggleContext.Provider value={{ toggle }}>
