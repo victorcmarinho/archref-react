@@ -1,3 +1,114 @@
+# React Reference Architecture
+## Develop
+`npm start` 
+`yarn start` 
+[https://localhost:3000]
+
+## Build
+`npm run build`
+`yarn build` 
+
+## Unit Tests
+`npm test`
+`yarn test` 
+
+
+**This is your source code tree:**
+
+```
+src
+|-- assets
+|-- components
+|-- hooks
+|-- mocks
+|-- models
+|-- pages
+|-- routes
+|-- utils
+|-- Bootstrap.tsx
+|-- App.tsx
+|-- index.tsx
+...
+```
+
+**This is your component structure:**
+
+```
+...
+components
+|-- YourComponent
+    |-- index.tsx
+    |-- styles.ts
+    |-- YourComponent.spc.ts
+...
+```
+
+
+`./assets`
+
+Here will be all your project assets as images, icons...
+
+`./components`
+
+Components are presentational only elements, grouping UI items
+
+`./pages`
+
+Pages are mapped in routes and have all the containers needed to implement a functionality
+
+`./routes`
+
+Routes contains the `react-router-dom` implementation to map the project's routes to the respective pages
+
+`./hooks`
+
+Services are responsible to handle the connection with all external elements, like APIs and global functions
+
+`./mocks`
+
+All mock data for your unit testes
+
+`./models`
+
+global interfaces and models that your project needs
+
+`./utils`
+
+Directory to keep all utils functions to share all over the project
+
+
+### More utils commands
+
+Analyzer your build bundle
+`npm run analyze`
+`yarn analyze` 
+
+
+Find and fix Javascrit and TypeScript problems according to pre-defined rules
+`npm run analyze`
+`yarn analyze` 
+
+Find and fix code formatted
+`npm run prettier`
+`yarn prettier` 
+
+
+# Advantages of using this react project template
+
+The project is already configured with:
+
+
+- React 
+- Typescript
+- Jest 
+- Babel-root-import 
+- unit testing example 
+- Eslint 
+- Prettier 
+- Styled Theming 
+- Husky  
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
