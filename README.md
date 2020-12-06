@@ -1,17 +1,20 @@
 # React Reference Architecture
+
 ## Develop
-`npm start` 
-`yarn start` 
+
+`npm start`
+`yarn start`
 [https://localhost:3000]
 
 ## Build
+
 `npm run build`
-`yarn build` 
+`yarn build`
 
 ## Unit Tests
-`npm test`
-`yarn test` 
 
+`npm test`
+`yarn test`
 
 **This is your source code tree:**
 
@@ -42,7 +45,6 @@ components
     |-- YourComponent.spc.ts
 ...
 ```
-
 
 `./assets`
 
@@ -76,38 +78,33 @@ global interfaces and models that your project needs
 
 Directory to keep all utils functions to share all over the project
 
-
 ### More utils commands
 
 Analyzer your build bundle
 `npm run analyze`
-`yarn analyze` 
-
+`yarn analyze`
 
 Find and fix Javascrit and TypeScript problems according to pre-defined rules
 `npm run analyze`
-`yarn analyze` 
+`yarn analyze`
 
 Find and fix code formatted
 `npm run prettier`
-`yarn prettier` 
-
+`yarn prettier`
 
 # Advantages of using this react project template
 
 The project is already configured with:
 
-
-- React 
+- React
 - Typescript
-- Jest 
-- Babel-root-import 
-- unit testing example 
-- Eslint 
-- Prettier 
-- Styled Theming 
-- Husky  
-
+- Jest
+- Babel-root-import
+- unit testing example
+- Eslint
+- Prettier
+- Styled Theming
+- Husky
 
 # Getting Started with Create React App
 
