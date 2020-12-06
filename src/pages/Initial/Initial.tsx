@@ -19,6 +19,7 @@ const Initial: React.FC = () => {
               name="DarkMode"
             />
           }
+          data-testid="toggleButton"
           label="DarkMode"
         />
       </Header>

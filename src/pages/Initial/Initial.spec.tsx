@@ -12,6 +12,7 @@ describe('<Initial/>', () => {
   beforeEach(() => {
     jest.spyOn(ThemeContext, 'useTheme').mockReturnValue({
       toggle,
+      themeState: { mode: 'light' },
     });
   });
 
@@ -21,8 +22,12 @@ describe('<Initial/>', () => {
   });
 
   it('should click toggle button', () => {
-    const { getByTestId } = render(<Initial />);
-    const button = getByTestId('toggleButton');
+    jest.spyOn(ThemeContext, 'useTheme').mockReturnValue({
+      toggle,
+      themeState: { mode: 'dark' },
+    });
+    const { getByLabelText } = render(<Initial />);
+    const button = getByLabelText('DarkMode');
     act(() => {
       fireEvent.click(button);
     });
