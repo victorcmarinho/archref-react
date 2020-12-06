@@ -1,18 +1,27 @@
-import React, { createContext, FC, useContext, useState } from 'react';
-import { useCallback } from 'react';
+import React, {
+  createContext,
+  FC,
+  useCallback,
+  useContext,
+  useState,
+} from 'react';
 
 import { ThemeProvider } from 'styled-components';
 
 import { Wrapper } from '../styles';
 
+interface IThemeState {
+  mode: 'dark' | 'light';
+}
 interface IMyThemeContext {
   toggle(): void;
+  themeState: IThemeState;
 }
 
 const ThemeToggleContext = createContext({} as IMyThemeContext);
 
 export const MyThemeProvider: FC = ({ children }) => {
-  const [themeState, setThemeState] = useState({
+  const [themeState, setThemeState] = useState<IThemeState>({
     mode: 'light',
   });
 
@@ -22,7 +31,7 @@ export const MyThemeProvider: FC = ({ children }) => {
   }, [setThemeState, themeState]);
 
   return (
-    <ThemeToggleContext.Provider value={{ toggle }}>
+    <ThemeToggleContext.Provider value={{ toggle, themeState }}>
       <ThemeProvider
         theme={{
           mode: themeState.mode,

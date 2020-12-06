@@ -5,9 +5,9 @@ import { fireEvent, render } from '@testing-library/react';
 
 import * as ThemeContext from '~/hooks/ThemeContext';
 
-import ToggleTheme from './index';
+import Initial from './Initial';
 
-describe('<ToggleTheme/>', () => {
+describe('<Initial/>', () => {
   const toggle = jest.fn();
   beforeEach(() => {
     jest.spyOn(ThemeContext, 'useTheme').mockReturnValue({
@@ -16,12 +16,12 @@ describe('<ToggleTheme/>', () => {
   });
 
   it('should render', () => {
-    const component = render(<ToggleTheme />);
+    const component = render(<Initial />);
     expect(component).toBeTruthy();
   });
 
   it('should click toggle button', () => {
-    const { getByTestId } = render(<ToggleTheme />);
+    const { getByTestId } = render(<Initial />);
     const button = getByTestId('toggleButton');
     act(() => {
       fireEvent.click(button);
