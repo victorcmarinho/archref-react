@@ -101,6 +101,10 @@
     "setupFiles": [
       "jest-canvas-mock"
     ],
+    "moduleNameMapper": {
+      "\\.(woff2?|ttf|otf|eot|png|jpe?g|gif|svg|css|scss)$": "<rootDir>/mock/jest-mockfile.js",
+      "^~\\/(.*)$": "<rootDir>/src/$1"
+    },
     "transform": {
       "\\.{tsx,jsx,ts}": "babel-jest"
     },
