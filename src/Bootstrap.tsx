@@ -7,7 +7,7 @@ import Routes from 'routers';
 import Loading from './components/Loading/Loading';
 import { SplashProvider } from './hooks/LoadingContext';
 import GlobalStyles from './styles/global';
-const Bootstrap: React.FC = ({ children }) => {
+const Bootstrap: React.FC = () => {
     return (
         <>
             <MyThemeProvider>
