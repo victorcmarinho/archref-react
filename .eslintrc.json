@@ -19,7 +19,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "import-helpers"],
+  "plugins": ["react", "@typescript-eslint", "import-helpers", "react-hooks", "security","prettier"],
   "settings": {
     "import/resolver": {
       "typescript": {},
@@ -47,5 +47,8 @@
         }
       }
     ]
-  }
+  },
+  "ignorePatterns": [
+    "tsconfig.json"
+  ]
 }

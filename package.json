@@ -18,7 +18,7 @@
     "source-map-explorer": "^2.5.1",
     "styled-components": "^5.2.1",
     "styled-theming": "^2.2.0",
-    "typescript": "^4.0.3",
+    "typescript": "^4.1.2",
     "web-vitals": "^0.2.4",
     "yup": "^0.32.1"
   },
@@ -28,8 +28,7 @@
     "lint": "./node_modules/.bin/eslint --fix \"./src/**/*.{ts,tsx,js,jsx}\"",
     "prettier": "prettier --write .",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "test:coverage": "react-app-rewired test --coverage --watchAll false",
+    "test": "react-app-rewired test --coverage --watchAll false",
     "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
@@ -70,6 +69,7 @@
     "@typescript-eslint/parser": "^4.9.0",
     "axios-mock-adapter": "^1.19.0",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
     "babel-plugin-root-import": "^6.6.0",
     "customize-cra": "^1.0.0",
     "eslint": "^7.15.0",
@@ -79,6 +79,8 @@
     "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-security": "^1.4.0",
     "husky": "^4.3.4",
     "jest-canvas-mock": "^2.3.0",
     "lint-staged": "^10.5.3",
@@ -89,7 +91,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint && npm run prettier",
-      "pre-push": "npm run test:coverage"
+      "pre-push": "npm run test"
     }
   },
   "lint-staged": {
@@ -99,11 +101,27 @@
     "setupFiles": [
       "jest-canvas-mock"
     ],
+    "transform": {
+      "\\.{tsx,jsx,ts}": "babel-jest"
+    },
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover",
+      "html"
+    ],
     "collectCoverageFrom": [
       "**/*.{tsx,jsx,ts}"
     ],
     "coveragePathIgnorePatterns": [
-      "styles.ts"
+      "styles.ts",
+      "global.ts",
+      "theme.ts",
+      "reportWebVitals.ts",
+      "\\.d\\.ts$",
+      "/src/assets/",
+      "/node_modules/"
     ],
     "coverageThreshold": {
       "global": {

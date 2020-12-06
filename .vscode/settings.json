@@ -6,5 +6,9 @@
     "source.fixAll": true,
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["javascript", "typescript"]
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
