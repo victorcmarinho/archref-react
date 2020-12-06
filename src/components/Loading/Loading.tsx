@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Lottie, { Options } from 'react-lottie';
 
 import reactAtomic from '~/assets/json/react-atomic.json';
@@ -17,4 +17,4 @@ const Loading: React.FC = () => {
     );
 };
 
-export default Loading;
+export default memo(Loading);
