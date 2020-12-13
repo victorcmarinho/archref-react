@@ -5,9 +5,9 @@ import { fireEvent, render } from '@testing-library/react';
 
 import * as ThemeContext from '~/hooks/ThemeContext';
 
-import Initial from './Initial';
+import Home from './Home';
 
-describe('<Initial/>', () => {
+describe('<Home/>', () => {
   const toggle = jest.fn();
   beforeEach(() => {
     jest.spyOn(ThemeContext, 'useTheme').mockReturnValue({
@@ -17,7 +17,7 @@ describe('<Initial/>', () => {
   });
 
   it('should render', () => {
-    const component = render(<Initial />);
+    const component = render(<Home />);
     expect(component).toBeTruthy();
   });
 
@@ -26,7 +26,7 @@ describe('<Initial/>', () => {
       toggle,
       themeState: { mode: 'dark' },
     });
-    const { getByLabelText } = render(<Initial />);
+    const { getByLabelText } = render(<Home />);
     const button = getByLabelText('DarkMode');
     act(() => {
       fireEvent.click(button);

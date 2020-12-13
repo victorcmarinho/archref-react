@@ -6,7 +6,7 @@ import { useTheme } from '~/hooks/ThemeContext';
 
 import { Container, Header } from './styles';
 
-const Initial: React.FC = () => {
+const Home: React.FC = () => {
   const { toggle, themeState } = useTheme();
   return (
     <Container>
@@ -29,4 +29,4 @@ const Initial: React.FC = () => {
   );
 };
 
-export default Initial;
+export default Home;
