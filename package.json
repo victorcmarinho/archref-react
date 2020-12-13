@@ -15,6 +15,7 @@
     "@material-ui/core": "^4.11.2",
     "axios": "^0.21.0",
     "date-fns": "^2.16.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "lodash": "^4.17.20",
     "node-sass": "^5.0.0",
     "polished": "^4.0.5",
@@ -103,7 +104,7 @@
       "jest-canvas-mock"
     ],
     "moduleNameMapper": {
-      "\\.(woff2?|ttf|otf|eot|png|jpe?g|gif|svg|css|scss)$": "<rootDir>/mock/jest-mockfile.js",
+      "\\.(woff2?|ttf|otf|eot|png|jpe?g|gif|svg|css|scss|webp)$": "<rootDir>/mock/jest-mockfile.js",
       "^~\\/(.*)$": "<rootDir>/src/$1"
     },
     "coverageReporters": [
