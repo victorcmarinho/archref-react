@@ -30,6 +30,9 @@
     "jsx-a11y"
   ],
   "settings": {
+    "react": {
+      "version": "detect"
+    },
     "import/resolver": {
       "typescript": {},
       "babel-plugin-root-import": {
