@@ -1,5 +1,8 @@
 # React Reference Architecture
 
+## Storybook
+`npm run storybook`
+`yarn storybook`
 ## Develop
 
 `npm start`
@@ -10,6 +13,10 @@
 
 `npm run build`
 `yarn build`
+
+## Build Storybook
+`npm run build-storybook`
+`yarn build-storybook`
 
 ## Unit Tests
 
