@@ -5,10 +5,7 @@ import reactAtomic from '~/assets/json/react-atomic.json';
 
 import { Container } from './styles';
 
-export interface ILoading {
-  title?: string;
-}
-const Loading: React.FC<ILoading> = ({ title = '' }) => {
+const Loading: React.FC = () => {
   const defaultOptions: Options = {
     loop: true,
     autoplay: true,
@@ -17,7 +14,6 @@ const Loading: React.FC<ILoading> = ({ title = '' }) => {
   return (
     <Container>
       <Lottie options={defaultOptions} />
-      <h1>{title}</h1>
     </Container>
   );
 };

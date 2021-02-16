@@ -129,6 +129,7 @@
       "\\.d\\.ts$",
       "/src/assets/",
       "/node_modules/",
+      ".stories.tsx",
       "/src/index.tsx"
     ],
     "coverageThreshold": {
