@@ -1,27 +1,25 @@
 import React from 'react';
 
-import { FormControlLabel, Switch } from '@material-ui/core';
-
 import { useTheme } from '~/hooks/ThemeContext';
 
 import { Container, Header } from './styles';
 
 const Home: React.FC = () => {
-  const { toggle, themeState } = useTheme();
+  const {
+    toggle,
+    themeState: { mode },
+  } = useTheme();
   return (
     <Container>
       <Header>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={themeState.mode === 'light' ? false : true}
-              onChange={() => toggle()}
-              name="DarkMode"
-            />
-          }
-          data-testid="toggleButton"
-          label="DarkMode"
+        <input
+          data-testid="input"
+          type="checkbox"
+          onClick={() => toggle()}
+          defaultValue={mode}
+          alt={mode}
         />
+        {mode}
       </Header>
       <h1>Reference Architecture - ReactJS</h1>
       <p>A ReactJS + TypeScript structure.</p>

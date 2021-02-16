@@ -10,6 +10,12 @@ describe('LoadingContext Hook', () => {
   const wrapper: FC = ({ children }) => (
     <SplashProvider SplashScreen={Loading}>{children}</SplashProvider>
   );
+
+  const wrapper2: FC = ({ children }) => (
+    <SplashProvider SplashScreen={Loading} initSplash={false}>
+      {children}
+    </SplashProvider>
+  );
   it('should be init hook', async () => {
     const { result } = renderHook(() => useSplashScreen(), {
       wrapper,
@@ -17,6 +23,13 @@ describe('LoadingContext Hook', () => {
 
     expect(result.current).toBeTruthy();
     expect(result.error).toBeFalsy();
+
+    const { result: result2 } = renderHook(() => useSplashScreen(), {
+      wrapper: wrapper2,
+    });
+
+    expect(result2.current).toBeTruthy();
+    expect(result2.error).toBeFalsy();
   });
 
   it('should be unmounted hook', async () => {
@@ -28,34 +41,14 @@ describe('LoadingContext Hook', () => {
     expect(result.error).toBeFalsy();
   });
 
-  it('should be able add loading', async () => {
-    const { result, waitFor } = renderHook(() => useSplashScreen(), {
-      wrapper,
-    });
-
-    const addLoading = jest.spyOn(result.current, 'addLoading');
-
-    act(() => {
-      waitFor(() => {
-        result.current.addLoading();
-      });
-    });
-
-    expect(addLoading).toBeCalled();
-    expect(result.current.isSplashScreenShowing).toBeTruthy();
-  });
-
   it('should be able remove loading', async () => {
     const { result, waitForNextUpdate } = renderHook(() => useSplashScreen(), {
       wrapper,
     });
 
     act(() => {
-      result.current.addLoading();
-      result.current.removeLoading();
+      result.current.setSplashScreenShowing(true);
       expect(result.current.isSplashScreenShowing).toBeTruthy();
-      const id = result.current.addLoading();
-      result.current.removeLoading(id);
     });
 
     await waitForNextUpdate();

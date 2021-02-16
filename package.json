@@ -10,7 +10,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --coverage --watchAll false",
     "eject": "react-app-rewired eject",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6006 -s public ./src/assets",
     "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
@@ -52,8 +52,8 @@
     "@types/styled-components": "^5.1.7",
     "@types/styled-theming": "^2.2.5",
     "@types/yup": "^0.29.11",
-    "@typescript-eslint/eslint-plugin": "^4.15.0",
-    "@typescript-eslint/parser": "^4.15.0",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
     "axios-mock-adapter": "^1.19.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-root-import": "^6.6.0",
@@ -133,10 +133,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 95,
-        "functions": 95,
-        "lines": 95,
-        "statements": 95
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
       }
     }
   }

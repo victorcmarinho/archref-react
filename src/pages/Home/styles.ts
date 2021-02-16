@@ -21,4 +21,10 @@ export const Container = styled.div`
   }
 `;
 
-export const Header = styled.header``;
+export const Header = styled.header`
+  input {
+    margin-right: 10px;
+  }
+
+  text-transform: capitalize;
+`;

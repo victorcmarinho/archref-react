@@ -1,7 +1,6 @@
 import React, {
   createContext,
   FC,
-  useCallback,
   useContext,
   useEffect,
   useState,
@@ -9,12 +8,13 @@ import React, {
 
 interface ISplashContext {
   isSplashScreenShowing: boolean;
-  addLoading(): number;
-  removeLoading(id?: number): void;
+  setSplashScreenShowing: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 interface ISplashProvider {
-  SplashScreen: FC;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  SplashScreen: FC<any>;
+  initSplash?: boolean;
 }
 
 const SplashContext = createContext({} as ISplashContext);
@@ -24,50 +24,21 @@ export const DEFAULT_LOADING_WAIT_TIME = 500;
 export const SplashProvider: FC<ISplashProvider> = ({
   SplashScreen,
   children,
+  initSplash = true,
 }) => {
-  const [isSplashScreenShowing, setSplashScreenShowing] = useState(true);
-  const [stopLoadingTimeoutId, setStopLoadingTimeoutId] = useState<number>();
-  const [loadings, setLoadings] = useState<number[]>([]);
+  const [isSplashScreenShowing, setSplashScreenShowing] = useState(initSplash);
 
   useEffect(() => {
-    if (loadings.length > 0) {
-      clearTimeout(stopLoadingTimeoutId);
-      setSplashScreenShowing(true);
-      return;
-    }
-    setStopLoadingTimeoutId(
-      setTimeout(() => {
-        setSplashScreenShowing(false);
-      }, DEFAULT_LOADING_WAIT_TIME),
+    const timer = setTimeout(
+      () => setSplashScreenShowing(false),
+      DEFAULT_LOADING_WAIT_TIME,
     );
-  }, [
-    isSplashScreenShowing,
-    loadings,
-    setSplashScreenShowing,
-    setStopLoadingTimeoutId,
-    clearTimeout,
-    setTimeout,
-    DEFAULT_LOADING_WAIT_TIME,
-  ]);
-
-  const addLoading = useCallback(() => {
-    const id = Math.random();
-    setLoadings(loadings => [...loadings, id]);
-    return id;
-  }, []);
-
-  const removeLoading = useCallback((removeId?: number) => {
-    if (removeId !== undefined)
-      setLoadings(loadings => loadings.filter(id => id !== removeId));
-    else
-      setLoadings(loadings =>
-        loadings.filter(id => id !== loadings[loadings.length - 1]),
-      );
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <SplashContext.Provider
-      value={{ isSplashScreenShowing, addLoading, removeLoading }}
+      value={{ isSplashScreenShowing, setSplashScreenShowing }}
     >
       {isSplashScreenShowing && <SplashScreen />}
       {children}

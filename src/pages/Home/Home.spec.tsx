@@ -26,8 +26,8 @@ describe('<Home/>', () => {
       toggle,
       themeState: { mode: 'dark' },
     });
-    const { getByLabelText } = render(<Home />);
-    const button = getByLabelText('DarkMode');
+    const { getByTestId } = render(<Home />);
+    const button = getByTestId('input');
     act(() => {
       fireEvent.click(button);
     });
