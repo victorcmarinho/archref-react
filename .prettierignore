@@ -7,3 +7,6 @@ coverage
 
 # Ignore config files
 tsconfig.json
+
+# StoryBook ignore
+.storybook/**/*
