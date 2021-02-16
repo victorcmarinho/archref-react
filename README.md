@@ -164,29 +164,29 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 You can learn more web develop tools [web.dev](https://web.dev/)
 
 
-### main dependecies
+### Main dependecies
 
-[axios] (https://www.npmjs.com/package/axios)
-[date-fns] (https://date-fns.org/)
-[lodash] (https://lodash.com/)
-[polished] (https://www.npmjs.com/package/polished)
-[react] (https://reactjs.org/)
-[react-hook-form] (https://react-hook-form.com/)
-[react-icons] (https://react-icons.github.io/react-icons/)
-[react-lottie] (https://www.npmjs.com/package/react-lottie) more: https://lottiefiles.com/
-[react-router-dom] (https://reactrouter.com/web/guides/quick-start)
-[styled-components] (https://styled-components.com/)
+- [axios] (https://www.npmjs.com/package/axios)
+- [date-fns] (https://date-fns.org/)
+- [lodash] (https://lodash.com/)
+- [polished] (https://www.npmjs.com/package/polished)
+- [react] (https://reactjs.org/)
+- [react-hook-form] (https://react-hook-form.com/)
+- [react-icons] (https://react-icons.github.io/react-icons/)
+- [react-lottie] (https://www.npmjs.com/package/react-lottie) more: https://lottiefiles.com/
+- [react-router-dom] (https://reactrouter.com/web/guides/quick-start)
+- [styled-components] (https://styled-components.com/)
 
 ### Main dev dependecies
 
-[storybook] (https://storybook.js.org/)
-[testing-library] (https://testing-library.com/)
-[axios-mock-adapter] (https://www.npmjs.com/package/axios-mock-adapter)
-[eslint] (https://eslint.org/)
-[husky] (https://www.npmjs.com/package/husky)
-[lint-staged] (https://www.npmjs.com/package/lint-staged)
-[prettier] (https://prettier.io/)
-[react-test-renderer] (https://pt-br.reactjs.org/docs/test-renderer.html)
-[source-map-explorer] (https://www.npmjs.com/package/source-map-explorer)
-[typescript] (https://www.typescriptlang.org/)
-[web-vitals] (https://web.dev/vitals/)
+- [storybook] (https://storybook.js.org/)
+- [testing-library] (https://testing-library.com/)
+- [axios-mock-adapter] (https://www.npmjs.com/package/axios-mock-adapter)
+- [eslint] (https://eslint.org/)
+- [husky] (https://www.npmjs.com/package/husky)
+- [lint-staged] (https://www.npmjs.com/package/lint-staged)
+- [prettier] (https://prettier.io/)
+- [react-test-renderer] (https://pt-br.reactjs.org/docs/test-renderer.html)
+- [source-map-explorer] (https://www.npmjs.com/package/source-map-explorer)
+- [typescript] (https://www.typescriptlang.org/)
+- [web-vitals] (https://web.dev/vitals/)
