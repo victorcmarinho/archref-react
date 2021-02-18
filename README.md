@@ -111,8 +111,10 @@ The project is already configured with:
 - unit testing example
 - Eslint
 - Prettier
+- Styled
 - Styled Theming
 - Husky
+- Storybook
 
 # Getting Started with Create React App
 
