@@ -4,7 +4,7 @@
 
 ## BFF - Proxy Configurate
 
-Geralmente veiculam o aplicativo React de front-end a partir do mesmo host e porta de sua implementação de back-end.
+Often serve the front-end React app from the same host and port as their backend implementation.
 
 Exemple:
 
@@ -15,7 +15,7 @@ Exemple:
 
 ```
 
-Para isso só é preciso configurar o arquivo: src/setupProxy.js 
+For that, it is only necessary to configure the file: src/setupProxy.js 
 
 example: 
 
