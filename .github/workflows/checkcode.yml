@@ -24,6 +24,9 @@ jobs:
 
       - name: Linting
         run: npm run lint
+        
+      - name: Audit
+        run: yarn  audit
 
       - name: Test
         run: npm run test
