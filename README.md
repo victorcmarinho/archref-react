@@ -1,4 +1,5 @@
 # React Reference Architecture
+[![Check Code](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml/badge.svg)](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml)
 
 ## Storybook
 `npm run storybook`
