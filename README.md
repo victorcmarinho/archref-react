@@ -1,6 +1,49 @@
 # React Reference Architecture
 [![Check Code](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml/badge.svg)](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml)
 
+
+## BFF - Proxy Configurate
+
+Geralmente veiculam o aplicativo React de front-end a partir do mesmo host e porta de sua implementação de back-end.
+
+Exemple:
+
+```
+/             - static server returns index.html with React app
+/todos        - static server returns index.html with React app
+/api/todos    - server handles any /api/* requests using the backend implementation
+
+```
+
+Para isso só é preciso configurar o arquivo: src/setupProxy.js 
+
+example: 
+
+```
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = function(app) {
+  // ...
+};
+
+```
+
+```
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = function(app) {
+  app.use(
+    '/api',
+    createProxyMiddleware({
+      target: 'http://localhost:5000',
+      changeOrigin: true,
+    })
+  );
+};
+
+```
+
+
 ## Storybook
 `npm run storybook`
 `yarn storybook`
