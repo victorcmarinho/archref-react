@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 
 import { renderHook, act } from '@testing-library/react-hooks';
-
-import Loading from '~/components/Loading/Loading';
+import Loading from 'components/Loading/Loading';
 
 import { useSplashScreen, SplashProvider } from './LoadingContext';
 
