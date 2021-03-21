@@ -47,6 +47,11 @@ module.exports = function(app) {
 ## Storybook
 `npm run storybook`
 `yarn storybook`
+
+Storybook is a development environment for React UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.
+
+[![Storybook](https://raw.githubusercontent.com/storybookjs/storybook/master/media/storybook-intro.gif)]
+
 ## Develop
 
 `npm start`
