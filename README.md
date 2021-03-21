@@ -1,5 +1,7 @@
 # React Reference Architecture
 [![Check Code](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml/badge.svg)](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml)
+
+### Preview
 ![preview image](https://github.com/victorcmarinho/arch-ref/blob/main/src/assets/images/ezgif-3-70796938700d.gif)
 
 ## BFF - Proxy Configurate
