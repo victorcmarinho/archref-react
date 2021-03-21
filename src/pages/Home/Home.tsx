@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Proxy } from 'components/Proxy';
 import { useTheme } from 'hooks/ThemeContext';
 
 import { Container, Header } from './styles';
@@ -23,6 +24,10 @@ const Home: React.FC = () => {
       </Header>
       <h1>Reference Architecture - ReactJS</h1>
       <p>A ReactJS + TypeScript structure.</p>
+
+      <h1>BFF - Proxy</h1>
+
+      <Proxy />
     </Container>
   );
 };
