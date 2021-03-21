@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useTheme } from '~/hooks/ThemeContext';
+import { useTheme } from 'hooks/ThemeContext';
 
 import { Container, Header } from './styles';
 
