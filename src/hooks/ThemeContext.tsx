@@ -7,8 +7,7 @@ import React, {
 } from 'react';
 
 import { ThemeProvider } from 'styled-components';
-
-import { Wrapper } from '../styles';
+import { Wrapper } from 'styles';
 
 interface IThemeState {
   mode: 'dark' | 'light';

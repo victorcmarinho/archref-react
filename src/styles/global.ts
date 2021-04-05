@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     * {
+        font-size: 62.5%;
         margin: 0;
         padding: 0;
         outline: none;
@@ -15,7 +16,7 @@ export default createGlobalStyle`
     }
     body, input, button {
         font-family: 'Roboto', sans-serif;
-        font-size: 16px;
+        font-size: 1.6rem;
     }
     button {
         cursor: pointer;
