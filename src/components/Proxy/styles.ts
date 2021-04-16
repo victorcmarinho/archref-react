@@ -6,10 +6,10 @@ export const GitList = styled.div`
   width: 100%;
   column-gap: 15px;
   row-gap: 15px;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   img {
-    height: 80px;
-    width: 80px;
+    height: 8rem;
+    width: 8rem;
     border-radius: 100%;
   }
 `;
