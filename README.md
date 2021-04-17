@@ -1,8 +1,8 @@
 # React Reference Architecture
 [![Check Code](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml/badge.svg)](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml)
-
+[![CodeQL](https://github.com/victorcmarinho/archref-react/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/victorcmarinho/archref-react/actions/workflows/codeql-analysis.yml)
 ### Preview
-![preview image](https://github.com/victorcmarinho/arch-ref/blob/main/images/preview.gif)
+![preview image](https://raw.githubusercontent.com/victorcmarinho/archref-react/main/images/preview.gif)
 
 ## BFF - Proxy Configurate
 
