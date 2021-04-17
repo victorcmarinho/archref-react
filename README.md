@@ -204,7 +204,8 @@ Your project can consume variables declared in your environment as if they were 
 
 
 > WARNING: Do not store any secrets (such as private API keys) in your React app!
->Environment variables are embedded into the build, meaning anyone can view them by inspecting your app's files.
+> Environment variables are embedded into the build, meaning anyone can view them by inspecting your app's files.
+> Create .env.test.local and .env.local before run project
 
 **Adding Development Environment Variables In**
 
