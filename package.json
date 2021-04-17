@@ -125,15 +125,19 @@
       "**/*.{tsx,jsx,ts}"
     ],
     "coveragePathIgnorePatterns": [
-      "styles.ts",
-      "global.ts",
       "theme.ts",
-      "reportWebVitals.ts",
+      "global.ts",
+      "styles.ts",
       "\\.d\\.ts$",
-      "/src/assets/",
-      "/node_modules/",
       ".stories.tsx",
-      "/src/index.tsx"
+      "/src/assets/",
+      "/src/configs/",
+      "/node_modules/",
+      "/src/index.tsx",
+      "/src/services/",
+      "service-worker.ts",
+      "reportWebVitals.ts",
+      "serviceWorkerRegistration.ts"
     ],
     "coverageThreshold": {
       "global": {
