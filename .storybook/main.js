@@ -9,9 +9,6 @@ module.exports = {
     "@storybook/preset-create-react-app"
   ],
   babel: async (options) => ({
-    ...options,
-    plugins: [...options.plugins, ['babel-plugin-root-import', {
-      rootPathSuffix: 'src',
-    }]]
+    ...options
   }),
 }
