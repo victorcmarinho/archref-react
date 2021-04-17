@@ -2,7 +2,7 @@
 [![Check Code](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml/badge.svg)](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml)
 
 ### Preview
-![preview image](https://github.com/victorcmarinho/arch-ref/blob/main/images/ezgif-3-70796938700d.gif)
+![preview image](https://github.com/victorcmarinho/arch-ref/blob/main/images/preview.gif)
 
 ## BFF - Proxy Configurate
 
