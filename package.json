@@ -1,6 +1,6 @@
 {
   "name": "react-ref",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
@@ -14,8 +14,10 @@
     "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.14",
     "axios": "^0.21.1",
     "date-fns": "^2.19.0",
+    "graphql": "^15.5.0",
     "http-proxy-middleware": "^1.0.6",
     "lodash": "^4.17.20",
     "node-sass": "^5.0.0",
@@ -29,6 +31,18 @@
     "react-scripts": "^4.0.3",
     "styled-components": "^5.2.1",
     "styled-theming": "^2.2.0",
+    "workbox-background-sync": "^6.1.2",
+    "workbox-broadcast-update": "^6.1.2",
+    "workbox-cacheable-response": "^6.1.2",
+    "workbox-core": "^6.1.2",
+    "workbox-expiration": "^6.1.2",
+    "workbox-google-analytics": "^6.1.2",
+    "workbox-navigation-preload": "^6.1.2",
+    "workbox-precaching": "^6.1.2",
+    "workbox-range-requests": "^6.1.2",
+    "workbox-routing": "^6.1.2",
+    "workbox-strategies": "^6.1.2",
+    "workbox-streams": "^6.1.2",
     "yup": "^0.32.9"
   },
   "devDependencies": {
