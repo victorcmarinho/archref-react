@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react';
 
-import axios from 'axios';
+import { getExample } from 'services/requestExample';
 
 import { IGitHubUsers } from './interfaces';
 import { GitList } from './styles';
@@ -10,7 +10,7 @@ export const Proxy: React.FC = memo(() => {
 
   useEffect(() => {
     const request = async () => {
-      const response = await axios.get<IGitHubUsers[]>('users');
+      const response = await getExample();
       setUserList(response.data);
     };
     request();
