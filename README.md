@@ -2,7 +2,7 @@
 [![Check Code](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml/badge.svg)](https://github.com/victorcmarinho/arch-ref/actions/workflows/checkcode.yml)
 [![CodeQL](https://github.com/victorcmarinho/archref-react/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/victorcmarinho/archref-react/actions/workflows/codeql-analysis.yml)
 ### Preview
-![preview image](https://github.com/victorcmarinho/arch-ref/blob/main/images/ezgif-3-70796938700d.gif)
+![preview image](https://raw.githubusercontent.com/victorcmarinho/archref-react/main/images/ezgif-3-70796938700d.gif)
 
 ## BFF - Proxy Configurate
 
