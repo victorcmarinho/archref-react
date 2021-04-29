@@ -1,0 +1,92 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: http-proxy-middleware
+    versions:
+    - 1.2.0
+    - 1.3.0
+  - dependency-name: react-hook-form
+    versions:
+    - 7.0.0
+    - 7.0.2
+    - 7.0.3
+    - 7.0.4
+    - 7.0.6
+    - 7.0.7
+    - 7.1.0
+    - 7.1.1
+    - 7.2.1
+    - 7.2.3
+    - 7.3.4
+  - dependency-name: "@types/node"
+    versions:
+    - 15.0.0
+  - dependency-name: "@types/react"
+    versions:
+    - 17.0.4
+  - dependency-name: polished
+    versions:
+    - 4.1.2
+  - dependency-name: "@storybook/node-logger"
+    versions:
+    - 6.2.9
+  - dependency-name: "@storybook/addon-links"
+    versions:
+    - 6.2.9
+  - dependency-name: "@testing-library/jest-dom"
+    versions:
+    - 5.12.0
+  - dependency-name: "@storybook/react"
+    versions:
+    - 6.2.9
+  - dependency-name: "@storybook/addon-essentials"
+    versions:
+    - 6.2.9
+  - dependency-name: "@storybook/addon-actions"
+    versions:
+    - 6.2.9
+  - dependency-name: "@testing-library/user-event"
+    versions:
+    - 13.0.0
+    - 13.0.1
+    - 13.0.2
+    - 13.1.5
+  - dependency-name: husky
+    versions:
+    - 6.0.0
+  - dependency-name: "@testing-library/react-hooks"
+    versions:
+    - 5.0.3
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.15.1
+  - dependency-name: axios
+    versions:
+    - 0.21.1
+  - dependency-name: eslint-plugin-react
+    versions:
+    - 7.22.0
+  - dependency-name: "@material-ui/core"
+    versions:
+    - 4.11.3
+  - dependency-name: node-notifier
+    versions:
+    - 8.0.1
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 7.2.0
+  - dependency-name: "@types/lodash"
+    versions:
+    - 4.14.168
+  - dependency-name: ini
+    versions:
+    - 1.3.8
+  - dependency-name: "@testing-library/react"
+    versions:
+    - 11.2.5
